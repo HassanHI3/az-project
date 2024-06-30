@@ -1,0 +1,38 @@
+
+body {
+    margin: 20px;
+}
+
+
+h1 {
+    color: black;
+    margin-bottom: 20px;
+}
+
+
+h2 {
+    color: black;
+    margin-top: 20px;
+    margin-bottom: 15px;
+}
+
+
+p {
+    color: black;
+    margin-top: 10px;
+    margin-bottom: 10px;
+}
+
+/* links to change to blue */
+a {
+    color: blue;
+}
+
+
+ul {
+    margin: 20px 0;
+}
+
+li {
+    margin: 5px 0;
+}
