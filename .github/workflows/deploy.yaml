@@ -14,7 +14,8 @@ jobs:
       uses: actions/checkout@v3
 
     - name: Setup Azure CLI
-      uses: azure/CLI@v2
+      uses: azure/CLI@v1.0.0
+
 
     - name: Deploy to Azure Blob Storage
       run: |
@@ -23,4 +24,4 @@ jobs:
           --account-name hassanaz \
           --account-key ${{ secrets.HASSANAZ_STORAGE_ACCOUNT_KEY }} \
           --container \$web \
-          --source ./
+          --source .
