@@ -1,0 +1,26 @@
+name: Deploy to Azure Blob Storage
+
+on:
+  push:
+    branches:
+      - main  # Adjust to your branch name
+
+jobs:
+  deploy:
+    runs-on: ubuntu-latest
+
+    steps:
+    - name: Checkout repository
+      uses: actions/checkout@v3
+
+    - name: Setup Azure CLI
+      uses: azure/CLI@v2
+
+    - name: Deploy to Azure Blob Storage
+      run: |
+        echo "Deploying to Azure Blob Storage"
+        az storage blob sync \
+          --account-name hassanaz \
+          --account-key ${{ secrets.HASSANAZ_STORAGE_ACCOUNT_KEY }} \
+          --container \$web \
+          --source ./
